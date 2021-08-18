@@ -47,29 +47,78 @@
     #sidebar, #mega-menu nav{
       background-color: #000;     
     }
-    main{
+    .main-section{
       display: flex;
+    }
+    @media only screen and (max-width: 1024px) {
+      .main-section{
+      display: flex;
+      flex-direction: column;
+    }
     }
     article{
      max-width: 66.66%;
      flex: 0 0 66.66%;
     }
+    @media only screen and (max-width: 1024px) {
+      article{
+        max-width: 100%;
+        flex: 0 0 100%;
+      }
+    }
     aside{
       max-width: 33.33%;
       flex: 0 0 33.33%;
     }
+    @media only screen and (max-width: 1024px) {
+        aside{
+            max-width: 100%;
+            flex: 0 0 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+      }
+    }
     .card{
       padding:0.5rem;
-      margin:0.5rem;
-      box-shadow: 10px 10px 8px 10px #888888;
-      display: flex;
+      margin:0.5rem;  
+      display: flex;      
+      border-bottom: 1px solid #e0e0e0;
+      margin-bottom: 0;
+      padding-bottom: 28px;
+    }
+    @media only screen and (max-width: 1024px) {
+      .card{
+         width:30%;
+         flex-direction: column;
+      }
+    }
+    @media only screen and (max-width: 768px) {
+      .card{
+         width:49%;
+      }
+    }
+    @media only screen and (max-width: 600px) {
+      .card{
+         width:100%;
+      }
     }
     .card-image{
       width:40%;
     }
+    @media only screen and (max-width: 1024px) {
+      .card-image{
+        width:100%;
+      }
+    }
     .card-body{
       width:60%;
       padding:0.5rem;
+    }
+    @media only screen and (max-width: 1024px) {
+      .card-body{
+        width:100%;
+      }
     }
     .tag{
       padding:6px;
@@ -91,9 +140,39 @@
         padding: 0;
         text-decoration: none;
       }
+      .main-banner{margin: 0.5rem;}
     .bg-enter{background-color:#c0392b;color:#fff;}
     .bg-life{background-color:#d35400;color:#000;}
     .bg-food{background-color:#f1c40f;color:#000;}
+    .mensExclusive{
+      margin-top: 30px;
+      padding: 42px 0;
+    }
+    h2{
+      float: left;
+    width: 100%;
+    font-size: 3em;
+    
+    font-stretch: normal;
+    line-height: 1.07;
+    padding-bottom: 10px;
+    color: #000;
+    border-bottom: 4px solid;
+    margin-bottom: 30px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-bottom: 3px solid #000;
+    }
+    .container{
+      width: 84%;    
+      margin: 0 auto;
+    }
+    @media only screen and (max-width:600px) {
+      .container{
+        width:100%;
+      }
+    }
   </style>
   </head>
   <body>
@@ -131,24 +210,71 @@
      
     </amp-sidebar>
     <main>
-      <article>
-     
-          <amp-img src="assets/Patriotic-Films.jpg" width="300" height="250" layout="responsive" alt="a4a image"></amp-img>
+      <section class="main-section">
+        <article>
       
-      </article>
-      <aside>
-        <div class="card">
-          <div class="card-image">
-            <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            <amp-img src="assets/Patriotic-Films.jpg" width="300" height="250" layout="responsive" alt="a4a image" class="main-banner"></amp-img>
+        
+        </article>
+        <aside>
+          <div class="card">
+            <div class="card-image">
+              <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+                <span class="tag bg-enter">Entertainment</span>
+                <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+                <small class="date">10 August,2021</small>
+            </div>
           </div>
-          <div class="card-body">
-              <span class="tag bg-enter">Entertainment</span>
-              <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
-              <small class="date">10 August,2021</small>
+          <div class="card">
+            <div class="card-image">
+              <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+                <span class="tag bg-enter">Entertainment</span>
+                <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+                <small class="date">10 August,2021</small>
+            </div>
           </div>
+          <div class="card">
+            <div class="card-image">
+              <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+                <span class="tag bg-enter">Entertainment</span>
+                <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+                <small class="date">10 August,2021</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+                <span class="tag bg-enter">Entertainment</span>
+                <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+                <small class="date">10 August,2021</small>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+            </div>
+            <div class="card-body">
+                <span class="tag bg-enter">Entertainment</span>
+                <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+                <small class="date">10 August,2021</small>
+            </div>
+          </div>
+        </aside>
+    </section>
+      <section class="mensExclusive">
+        <div class="container">
+          <h2>MAN'S LIFE EXCLUSIVES</h2>
         </div>
 
-      </aside>
+      </section>
     </main>
 
   </body>
