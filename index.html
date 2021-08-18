@@ -58,6 +58,42 @@
       max-width: 33.33%;
       flex: 0 0 33.33%;
     }
+    .card{
+      padding:0.5rem;
+      margin:0.5rem;
+      box-shadow: 10px 10px 8px 10px #888888;
+      display: flex;
+    }
+    .card-image{
+      width:40%;
+    }
+    .card-body{
+      width:60%;
+      padding:0.5rem;
+    }
+    .tag{
+      padding:6px;
+      background-color: #888888;
+      font-size:small;
+    }
+    .date{font-size: 11px;
+      color: #989595;
+      padding: 10px;
+      text-transform: uppercase;
+      margin-top: 5px;
+      padding-left: 0;}
+      .card-title a{
+        color: #192424;
+        font-size: 18px;
+        line-height: 1.38em;
+        word-break: break-word;
+        font-family:  Calibri, 'Trebuchet MS', sans-serif;
+        padding: 0;
+        text-decoration: none;
+      }
+    .bg-enter{background-color:#c0392b;color:#fff;}
+    .bg-life{background-color:#d35400;color:#000;}
+    .bg-food{background-color:#f1c40f;color:#000;}
   </style>
   </head>
   <body>
@@ -65,7 +101,7 @@
       <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
         <nav>
           <ul class='navbar'>
-            <li><amp-img alt="Man's Life" src="assets/Mans-Life_Web.png" width="40px" height="10px" layout="responsive"></amp-img></li>
+           
             <!-- list of menu items here -->
             <li><a href="#">Home</a></li>
             <li><a href="#">Auto</a></li>
@@ -83,8 +119,7 @@
         <!-- list of menu items here -->
         <nav>
           <ul class='navbar mb'>
-            <li><amp-img alt="Man's Life" src="assets/Mans-Life_Web.png" width="40px" height="10px" layout="responsive"></amp-img></li>
-            <!-- list of menu items here -->
+           
             <li><a href="#">Home</a></li>
             <li><a href="#">Auto</a></li>
             <li><a href="#">Entertainment</a></li>
@@ -101,7 +136,17 @@
           <amp-img src="assets/Patriotic-Films.jpg" width="300" height="250" layout="responsive" alt="a4a image"></amp-img>
       
       </article>
-      <aside>sddssd
+      <aside>
+        <div class="card">
+          <div class="card-image">
+            <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+          </div>
+          <div class="card-body">
+              <span class="tag bg-enter">Entertainment</span>
+              <h3 class="card-title"><a href="#">12 Best Desi Monsoon Snacks</a></h3>
+              <small class="date">10 August,2021</small>
+          </div>
+        </div>
 
       </aside>
     </main>
