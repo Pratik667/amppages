@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
+    <title>Man'sLife - Home</title>
+    <link rel="icon" type="image/jpg" href="https://www.manslife.in/wp-content/themes/manslife/assets/images/manslife_favicon.jpg">
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
 
 
   <style amp-custom>
+   
     body{
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -44,8 +47,22 @@
       color:#fff;   
       text-transform: uppercase; 
     }
-    #sidebar, #mega-menu nav{
-      background-color: #000;     
+    #sidebar, #mega-menu,#mega-menu nav,header{
+      background-color: #1a1819;     
+    }
+    @media (max-width: 500px) {
+      header{
+      padding: 15px 15px 10px 15px;
+      }
+      .sidebar-open-btn {
+        display: block;
+        background: #333333;
+        border: 0;
+        color: #fff;
+      }
+    }
+    #mega-menu{
+      padding: 30px 0;
     }
     .main-section{
       display: flex;
@@ -147,22 +164,33 @@
     .mensExclusive{
       margin-top: 30px;
       padding: 42px 0;
+      background:url(https://www.manslife.in/wp-content/themes/manslife/assets/images/exclusives.png) repeat-x;
+    }
+    @media only screen and (max-width:600px) {
+      .mensExclusive{
+        background:none;
+      }
     }
     h2{
       float: left;
-    width: 100%;
-    font-size: 3em;
-    
-    font-stretch: normal;
-    line-height: 1.07;
-    padding-bottom: 10px;
-    color: #000;
-    border-bottom: 4px solid;
-    margin-bottom: 30px;
-    font-size: 24px;
-    margin-bottom: 15px;
-    width: 100%;
-    border-bottom: 3px solid #000;
+      width: 100%;
+      font-size: 3em;      
+      font-stretch: normal;
+      line-height: 1.07;
+      padding-bottom: 10px;
+      color: #fff;
+      border-bottom: 4px solid;
+      margin-bottom: 30px;
+      font-size: 24px;
+      margin-bottom: 15px;
+      width: 100%;
+      border-bottom: 3px solid #fff;
+    }
+    @media only screen and (max-width:600px) {
+      h2{
+        color: #000;     
+        border-bottom: 3px solid #000;
+      }
     }
     .container{
       width: 84%;    
@@ -173,10 +201,69 @@
         width:100%;
       }
     }
+    .above-nav{
+      background: #fff;
+      color:#333333;
+      padding: 0.3rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media only screen and (max-width:600px) {
+      .above-nav{display:none;}
+    }
+    .above-nav p{
+      font-size: 1.2em;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    .mensExclusive .card{
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      background-color:#fff;
+      border-radius: 7px;
+      padding-bottom: 0.5rem;
+    }
+    .mensExclusive .card-image{
+      width: 100%;
+    }
+    .mensExclusive .card-body{
+      width: 100%;
+    }
+     @media only screen and (max-width:600px) {
+      .mensExclusive .card{     
+        width: 100%;
+        margin:0;
+        padding:0;
+      }
+    }
+    .mensExclusive .container{
+      display: flex;
+      flex-direction: column;
+    }
+    .mensExclusive .tag-cards{
+      display: flex;
+      flex-direction: row;
+    }
+    @media only screen and (max-width:600px) {
+      .mensExclusive .tag-cards{      
+        flex-direction: column;
+      }
+    }
   </style>
   </head>
   <body>
     <header>
+      <div class="above-nav">
+        <p class="welcome_text">India's Premier Lifestyle Destination For Men.</p>
+        <div class="iconWrap">
+          <amp-social-share type="facebook" data-param-url="https://www.facebook.com/manslife.in" aria-label="Share on Facebook" data-param-app_id="254325784911610"></amp-social-share>
+          <amp-social-share type="instagram" data-param-url="https://www.instagram.com/manslife.in/?igshid=1rrpqd8bitz2k" data-param-media="https://amp.dev/static/samples/img/amp.jpg" aria-label="Share on Instagram"></amp-social-share>
+          <amp-social-share type="youtube" data-param-url="https://www.youtube.com/channel/UCtp1Z-oG8UCq15yG-BpA5NA" aria-label="Share on Youtube"></amp-social-share>
+          <amp-social-share type="twitter" data-param-url="https://twitter.com/MansLifeIndia"  aria-label="Share on Twitter"></amp-social-share>        
+        </div>
+      </div>
       <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
         <nav>
           <ul class='navbar'>
@@ -272,6 +359,48 @@
       <section class="mensExclusive">
         <div class="container">
           <h2>MAN'S LIFE EXCLUSIVES</h2>
+          <div class="tag-cards">
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#">  Man’s Life July Cover Star Sonu Sood Talks About Becoming A Real-Life Hero   </a></h3>
+                  <small class="date">10 August,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#">  Man’s Life July Cover Star Sonu Sood Talks About Becoming A Real-Life Hero   </a></h3>
+                  <small class="date">10 August,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#">  Man’s Life July Cover Star Sonu Sood Talks About Becoming A Real-Life Hero   </a></h3>
+                  <small class="date">10 August,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/OTT-long-form-entertainment-article-31.07.2021.png"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#">  Man’s Life July Cover Star Sonu Sood Talks About Becoming A Real-Life Hero   </a></h3>
+                  <small class="date">10 August,2021</small>
+              </div>
+            </div>
+          </div>
         </div>
 
       </section>
