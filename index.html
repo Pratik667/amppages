@@ -161,6 +161,16 @@
     .bg-enter{background-color:#c0392b;color:#fff;}
     .bg-life{background-color:#d35400;color:#000;}
     .bg-food{background-color:#f1c40f;color:#000;}
+    .text-yellow{color:#eea20c;}
+    .border-yellow{ border-bottom: 4px solid #eea20c;}
+    .text-orange{  color: #f60;  }
+    .border-orange{ border-bottom: 4px solid #f60;}
+    .text-blue{  color: #255abc;  }
+    .border-blue{ border-bottom: 4px solid #255abc;}
+    .text-blue{  color: #255abc;  }
+    .border-blue{ border-bottom: 4px solid #255abc;}
+    .text-magenta{  color: #b3346c;  }
+    .border-magenta{ border-bottom: 4px solid #b3346c;}
     .mensExclusive{
       margin-top: 30px;
       padding: 42px 0;
@@ -171,7 +181,7 @@
         background:none;
       }
     }
-    h2{
+    .mensExclusive h2{
       float: left;
       width: 100%;
       font-size: 3em;      
@@ -187,7 +197,7 @@
       border-bottom: 3px solid #fff;
     }
     @media only screen and (max-width:600px) {
-      h2{
+      .mensExclusive h2{
         color: #000;     
         border-bottom: 3px solid #000;
       }
@@ -225,10 +235,10 @@
       border-radius: 7px;
       padding-bottom: 0.5rem;
     }
-    .mensExclusive .card-image{
+    .tag-cards .card-image{
       width: 100%;
     }
-    .mensExclusive .card-body{
+    .tag-cards .card-body{
       width: 100%;
     }
      @media only screen and (max-width:600px) {
@@ -251,6 +261,114 @@
         flex-direction: column;
       }
     }
+    .btn-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;     
+      margin-bottom: 20px;
+    } 
+    .btn-bar h3 {
+      width: 100%;
+      font-size: 24px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-stretch: normal;
+      line-height: initial;
+      padding-bottom: 10px;
+      /* color: #eea20c; */
+      border-bottom: 4px solid;
+      margin-bottom: 20px;
+      flex: 1;
+      border:0;
+      margin-bottom:0;
+      text-transform: uppercase;
+    }
+    .btn-bar .primary_btn {
+        border-radius: 0;
+        background-color: #f0f0e6;
+        color: #000;
+        font-size: 14px;
+        font-family: Calibri, 'Trebuchet MS', sans-serif;
+        line-height: 33px;
+        cursor: pointer;
+        padding: 0 17px;
+        margin: 0;
+        font-size: 14px;
+        font-weight: 900;
+        height: 33px;
+        display: inherit;  
+        text-transform: uppercase;
+        text-align: center;
+      }
+  .show-section{
+    margin-top:2rem;
+  }
+  .show-section .tag-cards .card{
+    width:30.33%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: 1px solid #f7f7f7;
+    background-color: #f7f7f7;
+  }
+  .show-section .tag-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .show-section .tag-cards .card:nth-child(1), .show-section .tag-cards .card:nth-child(2) {  
+      width: 47%;
+  }
+  @media only screen and (max-width:600px) {
+    .show-section .tag-cards .card,.show-section .tag-cards .card:nth-child(2){
+      width:100%;
+      flex-direction: row;
+    }
+    .show-section .tag-cards .card:nth-child(1){
+      flex-direction: column;
+      width:100%;
+    }
+  }
+  .subscribe_section .subscribe_inner {
+    background-image: url(https://www.manslife.in/wp-content/themes/manslife/assets/images/sub_bg.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding: 20px 0;
+    background-size: 100%;
+    color: #fff;
+    text-align: center;
+}
+.subscribe_section{
+  margin-top: 2rem;
+}
+ @media only screen and (max-width:600px) {
+  .subscribe_section .subscribe_inner {
+    background-size: cover;
+    margin-top: 30px;
+}
+ }
+
+ .subscribe_section .subscribe .textbox, .subscribe_section .subscribe .btn{
+  min-height:1.5rem;  
+ }
+ .subscribe_section .subscribe .btn{
+  border-radius: 0;
+    background-color: #f0f0e6;
+    color: #000;
+    font-size: 14px;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 33px;
+    cursor: pointer;
+    padding: 0 17px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 900;
+    height: 33px;
+    text-transform: uppercase;
+    text-align: center;
+    border:0;
+ }
   </style>
   </head>
   <body>
@@ -259,8 +377,6 @@
         <p class="welcome_text">India's Premier Lifestyle Destination For Men.</p>
         <div class="iconWrap">
           <amp-social-share type="facebook" data-param-url="https://www.facebook.com/manslife.in" aria-label="Share on Facebook" data-param-app_id="254325784911610"></amp-social-share>
-          <amp-social-share type="instagram" data-param-url="https://www.instagram.com/manslife.in/?igshid=1rrpqd8bitz2k" data-param-media="https://amp.dev/static/samples/img/amp.jpg" aria-label="Share on Instagram"></amp-social-share>
-          <amp-social-share type="youtube" data-param-url="https://www.youtube.com/channel/UCtp1Z-oG8UCq15yG-BpA5NA" aria-label="Share on Youtube"></amp-social-share>
           <amp-social-share type="twitter" data-param-url="https://twitter.com/MansLifeIndia"  aria-label="Share on Twitter"></amp-social-share>        
         </div>
       </div>
@@ -355,7 +471,7 @@
             </div>
           </div>
         </aside>
-    </section>
+      </section>
       <section class="mensExclusive">
         <div class="container">
           <h2>MAN'S LIFE EXCLUSIVES</h2>
@@ -403,6 +519,259 @@
           </div>
         </div>
 
+      </section>
+      <section class="show-section videos">
+        <div class="container">
+          <div class="btn-bar text-yellow border-yellow">
+            <h3>Videos</h3>
+            <a class="primary_btn">View All</a>
+          </div>
+          <div class="tag-cards">
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="show-section photos">
+        <div class="container">
+          <div class="btn-bar text-orange border-orange">
+            <h3>Photos</h3>
+            <a class="primary_btn">View All</a>
+          </div>
+          <div class="tag-cards">
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="subscribe_section">
+        <div class="container">
+          <div class="subscribe_inner">
+                <h2>JOIN OUR COMMUNITY!</h2>
+		            <p>Sign-up and join our community to get the weekly content directly to your inbox</p>
+                <div class="subscribe">
+                  <input type="email" class="textbox" name="email" placeholder="Enter Email" required/>
+                  <button type="submit" class="btn">Subscribe</button>
+                </div>
+                
+          </div>
+        </div>
+      </section>
+      <section class="show-section sports">
+        <div class="container">
+          <div class="btn-bar text-blue border-blue">
+            <h3>Sports</h3>
+            <a class="primary_btn">View All</a>
+          </div>
+          <div class="tag-cards">
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="show-section entertainment">
+        <div class="container">
+          <div class="btn-bar text-magenta border-magenta">
+            <h3>Entertainment</h3>
+            <a class="primary_btn">View All</a>
+          </div>
+          <div class="tag-cards">
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-image">
+                <amp-img  alt="A view of the sea"  src="assets/F1-mid-season-590x388.jpg"  width="152"  height="100"  layout="responsive"></amp-img>
+              </div>
+              <div class="card-body">
+                  <span class="tag bg-enter">Entertainment</span>
+                  <h3 class="card-title"><a href="#"> F1 MID SEASON REVIEW</a></h3>
+                  <small class="date">5 AUGUST,2021</small>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
