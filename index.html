@@ -62,7 +62,7 @@
       }
     }
     #mega-menu{
-      padding: 30px 0;
+      padding: 20px 0;
     }
     .main-section{
       display: flex;
@@ -214,10 +214,13 @@
     .above-nav{
       background: #fff;
       color:#333333;
+      
+    }
+    .above-nav .container{
       padding: 0.3rem 1rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: center;    
     }
     @media only screen and (max-width:600px) {
       .above-nav{display:none;}
@@ -303,7 +306,7 @@
     margin-top:2rem;
   }
   .show-section .tag-cards .card{
-    width:30.33%;
+    width:29.33%;
     display: flex;
     flex-direction: column;
     border-bottom: 0;
@@ -318,7 +321,7 @@
     flex-wrap: wrap;
   }
   .show-section .tag-cards .card:nth-child(1), .show-section .tag-cards .card:nth-child(2) {  
-      width: 47%;
+      width: 46%;
   }
   @media only screen and (max-width:600px) {
     .show-section .tag-cards .card,.show-section .tag-cards .card:nth-child(2){
@@ -369,19 +372,184 @@
     text-align: center;
     border:0;
  }
+ .brand-logo .logo-img{
+  width: 120px;
+    height: 25px;
+ }
+ nav{
+  display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+ }
+ 
+  @media only screen and (max-width:600px) {
+   
+    header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+ }
+ @media only screen and (max-width:1440px) and (min-width:768px) {
+  aside .card-title{
+    margin:8px 0;
+  }
+ }
+ @media only screen and (min-width:768px) {
+    header{
+      display: flex;
+      align-items: center;
+      justify-content:space-around;
+    }
+    #mega-menu{
+      order:2;
+    }
+    .brand .mb-logo{
+      order:1;
+    }
+    .brand-logo .logo-img {
+    width: 160px;
+    height: 40px;
+}
+ }
+ .footer-section{
+   margin-top:20px;
+   padding:0.5rem;
+   padding-bottom:0;
+   background-image: url(assets/footer_bg.png);
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    overflow: hidden;
+    width: 100%;
+    background-color: #181718;
+ }
+ .footer-section .subscribe_inner, .footer-section .follow_us{
+   color:#fff;
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:1rem 0;
+    padding:1rem 0;  
+ }
+ @media only screen and (max-width:600px) {
+  .footer-section .subscribe_inner, .footer-section .follow_us{
+    text-align:center;
+  }
+ }
+  .footer-section .follow_us{  
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+ }
+ .footer-section .subscribe_inner h3{
+   margin-bottom:0;
+ }
+ .footer-section .follow_us h4{
+  margin-top: 0;
+ }
+ .amp-social-share{
+    max-width: 30px;
+    max-height: 30px;
+ }
+ .my-row{
+  margin:1rem 0;
+    padding:1rem 0;
+ }
+ .col-4{
+   width:25%;
+   flex:0 0 25%;
+ }
+ @media only screen and (max-width:600px) {
+  .col-4{
+   width:100%;
+   flex:0 0 100%;
+   margin-top:0.5rem;
+   text-align: center;
+ }
+ .footer-section {
+   padding:0;
+ }
+ }
+ .col-4 .brand-logo .logo-img{
+  width: 100%;
+    height: 40px;
+ }
+ @media only screen and (max-width:600px) {
+  .col-4 .brand-logo .logo-img{
+    width: 80%;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+}
+ .col-4 .trending span{
+  margin-right: 15px;
+  font-size:14px;
+    font-weight: 900;
+    letter-spacing: 1.6px;
+    color:#fff;
+ }
+ .footer-links{
+    list-style: none;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+ @media only screen and (max-width:600px) {
+  .footer-links{
+    padding:0.5rem;
+  }
+ }
+ .footer-link{
+    float: left;
+    width: 100%;
+    font-size: 1.2em;
+    line-height: 1.19em;
+    display: flex;
+ }
+ .col-4 h4{
+  font-size: 14px;
+    font-weight: 900;
+    padding-left: 32px;
+    margin-bottom: 15px;
+    color: #fff;
+    margin-top: 0;
+ }
+ .footer-link a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size:12px;
+  text-align: left;
+ }
+.copyright{
+  background: #7c7c7c;
+    text-align: center;
+    color: #fff;
+    padding: 14px 14px 14px 14px;
+}
+ .copyright p{
+   padding:0;
+   margin:0;
+ }
   </style>
   </head>
   <body>
-    <header>
-      <div class="above-nav">
+    <div class="above-nav">
+      <div class="container">
         <p class="welcome_text">India's Premier Lifestyle Destination For Men.</p>
         <div class="iconWrap">
-          <amp-social-share type="facebook" data-param-url="https://www.facebook.com/manslife.in" aria-label="Share on Facebook" data-param-app_id="254325784911610"></amp-social-share>
-          <amp-social-share type="twitter" data-param-url="https://twitter.com/MansLifeIndia"  aria-label="Share on Twitter"></amp-social-share>        
+          <amp-social-share type="facebook" class="amp-social-share" data-param-url="https://www.facebook.com/manslife.in" aria-label="Share on Facebook" data-param-app_id="254325784911610"></amp-social-share>
+          <amp-social-share type="twitter" class="amp-social-share" data-param-url="https://twitter.com/MansLifeIndia"  aria-label="Share on Twitter"></amp-social-share>        
         </div>
       </div>
+    </div>
+    <header> 
       <amp-mega-menu id="mega-menu" height="50" layout="fixed-height">
-        <nav>
+        <nav>         
           <ul class='navbar'>
            
             <!-- list of menu items here -->
@@ -395,6 +563,11 @@
         </nav>
       </amp-mega-menu>
       <button class="sidebar-open-btn" on="tap:sidebar">=</button>
+      <div class="brand mb-logo">
+        <span class="brand-logo">
+            <amp-img src="assets/Mans-Life_Web.png" layout="responsive" width="55.87765957446808" height="55" alt="a sample image" class="logo-img"></amp-img>
+        </span>           
+      </div>
     </header>
     <amp-sidebar id="sidebar" layout="nodisplay">
      
@@ -773,6 +946,68 @@
           </div>
         </div>
       </section>
+      <footer class="footer-section">
+        <div class="container">
+          <div class="subscribe_inner">
+            <h3>LOOKING FOR MORE CONTENT TO SNACK ON? SUBCRIBE TO US</h3>
+            <p>Sign-up and join our community to get the weekly content directly to your inbox</p>
+            <div class="subscribe">
+              <input type="email" class="textbox" name="email" placeholder="Enter Email" required/>
+              <button type="submit" class="btn">Subscribe</button>
+            </div>            
+          </div>
+         
+          <div class="follow_us">
+            <h4>Follow Us</h4>
+            <div class="iconWrap">
+              <amp-social-share type="facebook" class="amp-social-share" data-param-url="https://www.facebook.com/manslife.in" aria-label="Share on Facebook" data-param-app_id="254325784911610"></amp-social-share>
+              <amp-social-share type="twitter" class="amp-social-share" data-param-url="https://twitter.com/MansLifeIndia"  aria-label="Share on Twitter"></amp-social-share>        
+            </div>
+          </div>
+        
+          <div class="my-row footer-links">
+              <div class="col-4">
+                <div class="brand">
+                  <span class="brand-logo">
+                      <amp-img src="assets/Mans-Life_Web.png" layout="responsive" width="55.87765957446808" height="55" alt="a sample image" class="logo-img"></amp-img>
+                  </span>           
+                </div>
+              </div>
+              <div class="col-4">
+                <h4>TRENDING ARTICLES</h4>
+                  <ul class="footer-links trending">
+                    <li class="footer-link"><span>#1</span><a href="https://www.manslife.in/lifestyle/the-monsoon-footwear-lineup/">The Monsoon Footwear Lineup</a></li>
+                    <li class="footer-link"><span>#2</span><a href="https://www.manslife.in/lifestyle/10-artisanal-chocolate-companies-you-need-to-try/">10 Artisanal Chocolate Companies You Need To Try</a></li>
+                    <li class="footer-link"><span>#3</span><a href="https://www.manslife.in/sports/top-5-underpriced-players-in-fpl-21-22/">Top 5 Underpriced Players In FPL 21/22</a></li>
+                    <li class="footer-link"><span>#4</span><a href="https://www.manslife.in/auto/diy-auto-lights-on-your-instrument-cluster/">DIY Auto: Lights On Your Instrument Cluster!</a></li>
+                    <li class="footer-link"><span>#5</span><a href="https://www.manslife.in/lifestyle/is-your-smartphone-ageing-your-skin/">Is Your Smartphone Ageing Your Skin?</a></li>
+                  </ul>
+              </div>
+              <div class="col-4">
+                <h4>CATEGORIES</h4>
+                <ul class="footer-links">
+                  <li class="footer-link"><a href="https://www.manslife.in/category/auto/">Auto</a></li>
+                  <li class="footer-link"><a href="https://www.manslife.in/category/sports/">Sports</a></li>
+                  <li class="footer-link"><a href="https://www.manslife.in/category/entertainment/">Entertainment</a></li>
+                  <li class="footer-link"><a href="https://www.manslife.in/category/lifestyle/">Lifestyle</a></li>
+                </ul>
+              </div>
+              <div class="col-4">
+                <h4>KNOW MORE</h4>
+                <ul class="footer-links">
+                  <li class="footer-link"><a href="https://www.manslife.in/terms-and-conditions/">Terms and Conditions</a></li>
+                  <li class="footer-link"><a href="https://www.manslife.in/privacy-policy/">Privacy Policy</a></li>
+                  <li class="footer-link"><a href="https://www.manslife.in/contact-us/">Contact Us</a></li>
+                </ul>
+              </div>
+          </div>
+
+        
+        </div>
+        <div class="copyright">
+          <p>Copyright © 2021 Mammoth Media I All Rights Reserved</p>
+        </div>
+      </footer>
     </main>
 
   </body>
